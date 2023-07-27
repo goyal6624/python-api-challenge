@@ -1,2 +1,8 @@
 # python-api-challenge
- Module 6 Challenge for the University of Minnesota's "Data Visualization & Analytics Boot Camp" 
+This repository houses two Jupyter Notebooks: `WeatherPy.ipynb` and `VacationPy.ipynb`. The former contains a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator, including temperature, humidity, cloudiness, and wind speed. The latter contains a Python script to plan future vacations based on weather preferences.
+
+## WeatherPy
+In this example, I created a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, I utilized [citipy](https://pypi.python.org/pypi/citipy) and the [OpenWeatherMap API](https://openweathermap.org/api) to create a representative model of weather across world cities. The most interesting part about this, in my opinion, is the fact that the graphs will look different depending on which time of the year you run the notebook, as the time of year will affect the weather in the northern and southern hemispheres... and therefore, my graphs do not match the example graphs in the homework instructions.
+
+## VacationPy
+In this script, I used `jupyter-gmaps` and the Google Places API on `Geoaplify` to plan future vacations based on weather preferences. First, I created a humidity heatmap using a dataframe extracted from a CSV file from `WeatherPy`. I then narrowed down the DataFrame to find my ideal weather conditions. Using `Geoaplify``, I found the first hotel for each city located within 10000 meters of my ideal weather conditions. Finally, I plotted the hotels on top of the humidity heatmap with each pin containing the **Hotel Name**, **City**, and **Country**.
